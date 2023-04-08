@@ -16,7 +16,7 @@ async function loadTrainingData() {
   for (const label of labels) {
     const descriptors = [];
     for (let i = 1; i <= 4; i++) {
-      const image = await faceapi.fetchImage(`/images/${label}/${i}.jpg`);
+      const image = await faceapi.fetchImage(`./images/${label}/${i}.jpg`);
       // trả về các điểm mốc khuôn mặt và bộ mô tả khuôn mặt cho khuôn mặt đó
       const detection = await faceapi
         .detectSingleFace(image) 
